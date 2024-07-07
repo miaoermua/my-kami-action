@@ -7,7 +7,7 @@ RUN apk add libc6-compat git && \
 WORKDIR /app
 RUN git clone https://github.com/miaoermua/kami.git --depth 1 .
 ENV BASE_URL=https://api.miaoer.xyz
-ENV NEXT_PUBLIC_API_URL=${BASE_URL}/api
+ENV NEXT_PUBLIC_API_URL=${BASE_URL}/api/v2
 ENV NEXT_PUBLIC_GATEWAY_URL=${BASE_URL}
 RUN node -e "console.log(process.env)" && \
     pnpm install && \
