@@ -6,7 +6,7 @@ RUN apk add libc6-compat git && \
 
 WORKDIR /app
 RUN git clone https://github.com/miaoermua/kami.git --depth 1 .
-ENV BASE_URL=https://api.miaoer.net
+ENV BASE_URL=https://www.miaoer.net
 ENV NEXT_PUBLIC_API_URL=https://api.miaoer.net/api/v2
 ENV NEXT_PUBLIC_GATEWAY_URL=https://api.miaoer.net
 RUN node -e "console.log(process.env)" && \
