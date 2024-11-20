@@ -3,7 +3,7 @@ FROM node:20-alpine AS builder
 RUN apk add --no-cache libc6-compat git
 RUN npm i -g pnpm
 WORKDIR /app
-RUN git clone https://github.com/ttimochan/kami.git 
+RUN git clone https://github.com/miaoermua/kami.git 
 
 RUN cd kami && \
     pnpm install && \
@@ -17,7 +17,7 @@ FROM node:20-alpine AS runner
 WORKDIR /app
 
 ENV NODE_ENV production
-ENV BASE_URL=https://www.timochan.cn
+ENV BASE_URL=https://www.miaoer.net
 ENV BASE_URL=${BASE_URL}
 ENV NEXT_PUBLIC_API_URL=${BASE_URL}/api
 ENV NEXT_PUBLIC_GATEWAY_URL=${BASE_URL}
