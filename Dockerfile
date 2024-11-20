@@ -3,7 +3,7 @@ FROM node:20-alpine AS builder
 RUN apk add --no-cache libc6-compat git
 RUN npm i -g pnpm
 WORKDIR /app
-RUN git clone https://github.com/miaoermua/kami.git 
+RUN git clone https://github.com/miaoermua/my-kami.git 
 
 RUN cd kami && \
     pnpm install && \
