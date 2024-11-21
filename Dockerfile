@@ -5,7 +5,7 @@ RUN npm i -g pnpm
 WORKDIR /app
 RUN git clone https://github.com/miaoermua/my-kami.git 
 
-RUN cd kami && \
+RUN cd my-kami && \
     pnpm install && \
     npm run build
 
