@@ -19,7 +19,7 @@ WORKDIR /app
 ENV NODE_ENV production
 ENV BASE_URL=https://www.miaoer.net
 ENV BASE_URL=${BASE_URL}
-ENV NEXT_PUBLIC_API_URL=https://api.miaoer.net/api
+ENV NEXT_PUBLIC_API_URL=https://api.miaoer.net/api/v2
 ENV NEXT_PUBLIC_GATEWAY_URL=https://api.miaoer.net
 RUN node -e "console.log(process.env)"
 # Uncomment the following line in case you want to disable telemetry during runtime.
