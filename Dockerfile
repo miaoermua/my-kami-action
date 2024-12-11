@@ -29,14 +29,14 @@ RUN addgroup --system --gid 1001 nodejs
 RUN adduser --system --uid 1001 nextjs
 
 # You only need to copy next.config.mjs if you are NOT using the default configuration
-COPY --from=builder /app/kami/next.config.mjs ./
-COPY --from=builder /app/kami/public ./public
-COPY --from=builder /app/kami/package.json ./package.json
+COPY --from=builder /app/my-kami/next.config.mjs ./
+COPY --from=builder /app/my-kami/public ./public
+COPY --from=builder /app/my-kami/package.json ./package.json
 
 # Automatically leverage output traces to reduce image size 
 # https://nextjs.org/docs/advanced-features/output-file-tracing
-COPY --from=builder --chown=nextjs:nodejs /app/kami/.next/standalone ./
-COPY --from=builder --chown=nextjs:nodejs /app/kami/.next/static ./.next/static
+COPY --from=builder --chown=nextjs:nodejs /app/my-kami/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/my-kami/.next/static ./.next/static
 
 USER nextjs
 
