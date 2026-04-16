@@ -3,9 +3,9 @@ FROM node:24-alpine AS builder
 RUN apk add --no-cache libc6-compat git
 RUN npm i -g pnpm
 WORKDIR /app
-RUN git clone https://github.com/miaoermua/my-kami.git 
+RUN git clone https://github.com/miaoermua/my-kami.git kami
 
-RUN cd my-kami && \
+RUN cd kami && \
     pnpm install && \
     npm run build
 
